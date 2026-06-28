@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upgrader</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-icons">ⓘ ⚙️ 🔊 ⚡</div>
+
+<div class="balance-box">
+  <span id="balanceAmount">0.0</span>
+  <span class="coin">⌘</span>
+  <button id="topUpButton">💼 Top Up</button>
+</div>
+
+<div class="layout">
+  <div class="side">
+    <h3>Select skins or skins and balance to use</h3>
+    <p>You can select multiple skins</p>
+    <div class="glow"></div>
+    <div class="weapon"></div>
+    <div class="chevrons"><div></div><div></div><div></div></div>
+  </div>
+
+  <main class="main">
+    <div class="wheel">
+      <div class="outer-lines"></div>
+      <div class="outer-progress" id="outerProgress"></div>
+      <div class="ring"></div>
+      <div class="chance" id="chance"></div>
+      <div class="inner-cut"></div>
+
+      <div class="center" id="center">
+        <div class="center-text">
+          <strong id="percentText">50.00%</strong>
+          <span id="chanceText">medium chance</span>
+        </div>
+      </div>
+
+      <div class="label top">100%</div>
+      <div class="label left">50%</div>
+      <div class="label right">50%</div>
+
+      <div class="rotator" id="rotator">
+        <div class="pointer">↑</div>
+      </div>
+    </div>
+
+    <button class="spin-btn" id="spinButton">⌃ Upgrade</button>
+    <div class="message" id="message"></div>
+  </main>
+
+  <div class="side">
+    <h3>Select skin for upgrade</h3>
+    <div class="glow"></div>
+    <div class="weapon"></div>
+    <div class="chevrons"><div></div><div></div><div></div></div>
+  </div>
+</div>
+<div class="skin-area">
+  <section class="inventory-section my-inventory">
+    <div class="inventory-header">
+      <h2>My skins</h2>
+      <button id="addSkinButton">+ Skin hinzufügen</button>
+    </div>
+
+    <div class="inventory-grid" id="inventoryGrid"></div>
+  </section>
+</div>
+<div class="bottom">
+  <div class="fake-balance">
+    <div class="balance-row">
+      <span>Balance amount:</span>
+      <span><strong>0.00 ⌘</strong> &nbsp; (max 0,00)</span>
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <div class="buttons">
+  <button data-multi="2">x2</button>
+  <button data-multi="4">x4</button>
+  <button data-multi="8">x8</button>
+  <button data-percent="35">35%</button>
+  <button data-percent="55" class="active">55%</button>
+  <button data-percent="75">75%</button>
+  <button>⚙️</button>
+</div>
+</div>
+
+<div class="money-modal" id="moneyModal">
+  <div class="money-box">
+    <h2>Balance setzen</h2>
+
+    <input
+      type="number"
+      id="moneyInput"
+      placeholder="Neue Balance">
+
+    <div class="money-actions">
+      <button id="saveMoneyButton">Speichern</button>
+      <button id="closeMoneyButton">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<script src="skins.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
